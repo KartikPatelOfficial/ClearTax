@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
+    android:elevation="16dp"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -33,6 +34,8 @@
     </LinearLayout>
 
     <android.support.v7.widget.RecyclerView
+        android:scrollbars="horizontal"
+        android:scrollbarStyle="insideOverlay"
         android:id="@+id/bottomRecyclerView"
         android:layout_width="match_parent"
         tools:listitem="@layout/recycler_bottom_sheet"

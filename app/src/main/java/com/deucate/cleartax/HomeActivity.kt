@@ -28,7 +28,7 @@ class HomeActivity : AppCompatActivity() {
         val latestTweets = ArrayList<Tweet>()
 
         val adapter = HomeAdapter(tweets)
-        val bottomAdapter = BottomAdapter(latestTweets,this)
+        val bottomAdapter = BottomAdapter(latestTweets)
 
         recyclerView.layoutManager = LinearLayoutManager(this)
         bottomRecyclerView.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)

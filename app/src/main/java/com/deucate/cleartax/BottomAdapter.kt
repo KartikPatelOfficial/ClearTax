@@ -1,6 +1,6 @@
 package com.deucate.cleartax
 
-import android.content.Context
+import android.annotation.SuppressLint
 import android.net.Uri
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -9,9 +9,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import com.squareup.picasso.Picasso
 import de.hdodenhof.circleimageview.CircleImageView
+import android.text.format.DateUtils
+import java.util.*
 
 
-class BottomAdapter(val tweets: ArrayList<Tweet>,val context:Context) : RecyclerView.Adapter<ViewholderBottom>() {
+class BottomAdapter(val tweets: ArrayList<Tweet>) : RecyclerView.Adapter<ViewholderBottom>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewholderBottom {
@@ -22,10 +24,11 @@ class BottomAdapter(val tweets: ArrayList<Tweet>,val context:Context) : Recycler
         return tweets.size
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ViewholderBottom, position: Int) {
         val tweet = tweets[position]
-
-        holder.profileNameTV.text = tweet.username
+        val result = DateUtils.getRelativeTimeSpanString(tweet.time.time, Calendar.getInstance().timeInMillis, 0)
+        holder.profileNameTV.text = tweet.username +" . "+result
         holder.tweetTV.text = tweet.tweet
         Picasso.get().load(Uri.parse(tweet.profilePicURL)).into(holder.profilePictureIV)
     }
