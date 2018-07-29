@@ -17,10 +17,7 @@ install app from Assets folder.
 
 ## Tests
 
-
-<img src="./Assets/latest.jpg" width="200">
-<img src="./Assets/home.jpg" width="200">
-<img src="./Assets/performance.jpg" width="200">
+<img src="./Assets/latest.jpg" width="200"><img src="./Assets/home.jpg" width="200"><img src="./Assets/performance.jpg" width="200">
 
 ## Documentation
 
