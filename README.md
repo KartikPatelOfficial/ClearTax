@@ -13,13 +13,13 @@
 Install as usual.
 Run app with android studio
 OR
-install app from Relese folder.
+install app from Assets folder.
 
 ## Tests
 
-![Latest Tweet](https://photos.app.goo.gl/3afhmZizmrqQeK7BA)
-![Home Screen](https://photos.app.goo.gl/4wYETfJgQbeghSXu7)
-![Performance](https://photos.app.goo.gl/73pxVgxNdvz4D9259)
+![Latest Tweet](/Assets/latest.jpg)
+![Home Screen](/Assets/home.jpg)
+![Performance](/Assets/performance.jpg)
 
 ## Documentation
 
@@ -29,12 +29,6 @@ Special thanks to:
 * Twitter: For API
 * [Islandora Group](https://groups.google.com/forum/?hl=en&fromgroups#!forum/islandora): For CircleImageView
 * ServiQuik: For exam
-
-## Troubleshooting/Issues
-
-Having problems or solved a problem? Check out the Islandora google groups for a solution.
-
-* [Islandora Group](https://groups.google.com/forum/?hl=en&fromgroups#!forum/islandora)
 
 ## Maintainers/Sponsors
 
