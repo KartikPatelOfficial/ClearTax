@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".HomeActivity">
 
     <LinearLayout
@@ -31,9 +31,20 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
+
+    <com.comix.overwatch.HiveProgressView
+        android:id="@+id/processView"
+        android:layout_width="192dp"
+        android:layout_height="192dp"
+        android:layout_gravity="center"
+        app:hive_animDuration="5000"
+        app:hive_color="@color/colorAccent"
+        app:hive_cornerRadius="20"
+        app:hive_shrink="true" />
+
     </LinearLayout>
 
-    <include
-        layout="@layout/bottom_sheet" />
+
+    <include layout="@layout/bottom_sheet" />
 
 </android.support.design.widget.CoordinatorLayout>
