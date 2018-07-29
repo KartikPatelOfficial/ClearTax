@@ -1,17 +1,21 @@
 package com.deucate.cleartax
 
+import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
-import java.sql.Timestamp
+import android.view.animation.AnimationUtils
+import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : AppCompatActivity() {
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+        val toolbar = toolbar
+        toolbar.title = "ClearTax"
+        toolbar.setTitleTextColor(Color.parseColor("#FFFFFF"))
 
         if (!ConnectionChecker(this).conavailable()){
 
@@ -24,7 +28,7 @@ class HomeActivity : AppCompatActivity() {
         val latestTweets = ArrayList<Tweet>()
 
         val adapter = HomeAdapter(tweets)
-        val bottomAdapter = BottomAdapter(latestTweets)
+        val bottomAdapter = BottomAdapter(latestTweets,this)
 
         recyclerView.layoutManager = LinearLayoutManager(this)
         bottomRecyclerView.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
@@ -44,5 +48,6 @@ class HomeActivity : AppCompatActivity() {
         adapter.notifyDataSetChanged()
         bottomAdapter.notifyDataSetChanged()
     }
+
 
 }

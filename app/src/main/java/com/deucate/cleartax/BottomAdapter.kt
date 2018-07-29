@@ -1,5 +1,6 @@
 package com.deucate.cleartax
 
+import android.content.Context
 import android.net.Uri
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -9,7 +10,9 @@ import android.widget.TextView
 import com.squareup.picasso.Picasso
 import de.hdodenhof.circleimageview.CircleImageView
 
-class BottomAdapter(val tweets: ArrayList<Tweet>) : RecyclerView.Adapter<ViewholderBottom>() {
+
+class BottomAdapter(val tweets: ArrayList<Tweet>,val context:Context) : RecyclerView.Adapter<ViewholderBottom>() {
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewholderBottom {
         return ViewholderBottom(LayoutInflater.from(parent.context).inflate(R.layout.recycler_bottom_sheet, parent, false))
