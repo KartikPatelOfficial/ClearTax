@@ -19,6 +19,12 @@ install app from Assets folder.
 
 <img src="./Assets/latest.jpg" width="200">    <img src="./Assets/home.jpg" width="200">    <img src="./Assets/performance.jpg" width="500">
 
+## Performace qualifty
+
+* Tested device : Oneplus 6 (SDK 27)
+* Max ram usage : 120MB
+* CPU usage : <1% AVG
+
 ## Documentation
 
 Special thanks to:
