@@ -18,24 +18,31 @@ class HomeActivity : AppCompatActivity() {
         }
 
         val recyclerView = findViewById<RecyclerView>(R.id.homeRecyclerView)
+        val bottomRecyclerView = findViewById<RecyclerView>(R.id.bottomRecyclerView)
+
         val tweets = ArrayList<Tweet>()
+        val latestTweets = ArrayList<Tweet>()
+
         val adapter = HomeAdapter(tweets)
+        val bottomAdapter = BottomAdapter(latestTweets)
 
         recyclerView.layoutManager = LinearLayoutManager(this)
+        bottomRecyclerView.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
+
         recyclerView.adapter = adapter
+        bottomRecyclerView.adapter = bottomAdapter
 
         val result = GetTweets().execute().get()
-        val latestTweets = ArrayList<Tweet>()
-        latestTweets.add(Tweet(result!![0].user.profileImageURL,result[0].user.name,result[0].text,result[0].createdAt as Timestamp))
-        latestTweets.add(Tweet(result[1].user.profileImageURL,result[1].user.name,result[1].text,result[1].createdAt as Timestamp))
-        latestTweets.add(Tweet(result[2].user.profileImageURL,result[2].user.name,result[2].text,result[2].createdAt as Timestamp))
-
+        latestTweets.add(Tweet(result!![0].user.biggerProfileImageURL,result[0].user.name,result[0].text,result[0].createdAt))
+        latestTweets.add(Tweet(result[1].user.biggerProfileImageURL,result[1].user.name,result[1].text,result[1].createdAt))
+        latestTweets.add(Tweet(result[2].user.biggerProfileImageURL,result[2].user.name,result[2].text,result[2].createdAt))
 
         for(i in 0 until result.size){
             val tweet = Tweet(result[i].user.profileImageURL,result[i].user.name+" . @"+result[i].user.screenName,result[i].text)
             tweets.add(tweet)
         }
         adapter.notifyDataSetChanged()
+        bottomAdapter.notifyDataSetChanged()
     }
 
 }

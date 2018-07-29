@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_marginTop="16dp"
+        android:id="@+id/detailImage"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_person_black_24dp"
+        app:civ_border_color="@color/twitter_blue"
+        app:civ_border_width="3dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+
+    <TextView
+        android:id="@+id/detailName"
+        android:layout_marginTop="8dp"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:text="Kartik . 45min ago"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:layout_margin="16dp"
+        android:id="@+id/detailText"
+        android:layout_marginTop="8dp"
+        android:text="From a mentee in Cohort 4 to a second time Mentor in Cohort 6, like @RuteRadio and many others ✨
+
+@MozOpenLeaders has helped us learn a lot and gives y'all a platform to do more and work open. Bring your project for mentorship  training on open practices http://mzl.la/openleaders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="HardcodedText" />
+
+</LinearLayout>

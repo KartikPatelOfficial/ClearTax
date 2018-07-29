@@ -1,5 +1,5 @@
 package com.deucate.cleartax
 
-import java.sql.Timestamp
+import java.util.*
 
-class Tweet(val profilePicURL:String, val username:String, val tweet:String, val time:Timestamp = Timestamp(1532890050 ))
+class Tweet(val profilePicURL:String, val username:String, val tweet:String, val time:Date = Date(1532890050 ))
