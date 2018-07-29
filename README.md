@@ -17,9 +17,9 @@ install app from Assets folder.
 
 ## Tests
 
-![Latest Tweet](/Assets/latest.jpg)
-![Home Screen](/Assets/home.jpg)
-![Performance](/Assets/performance.jpg)
+![Latest Tweet](/Assets/latest.jpg =250px)
+![Home Screen](/Assets/home.jpg =250px)
+![Performance](/Assets/performance.jpg =250px)
 
 ## Documentation
 
