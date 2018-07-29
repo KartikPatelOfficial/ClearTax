@@ -3,7 +3,9 @@ package com.deucate.cleartax
 import android.annotation.SuppressLint
 import android.content.Context
 import android.os.AsyncTask
-import android.widget.Toast
+import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.RecyclerView
+import android.view.LayoutInflater
 import twitter4j.*
 import twitter4j.conf.ConfigurationBuilder
 
@@ -33,10 +35,13 @@ class GetTweets(val context:Context) : AsyncTask<Void, Void, MutableList<Status>
         return null
     }
 
-    override fun onPostExecute(result: MutableList<twitter4j.Status>?) {
-        super.onPostExecute(result)
+//
+//    fun loadData(tweets:ArrayList<Tweet>):ArrayList<Tweet>{
+//        val view = LayoutInflater.from(context).inflate(R.layout.activity_home,null)
+//        val recyclerView = view.findViewById<RecyclerView>(R.id.homeRecyclerView)
+//        recyclerView.layoutManager = LinearLayoutManager(context)
+//        recyclerView.adapter = HomeAdapter(tweets)
+//    }
 
-        Toast.makeText(context, result!![0].text, Toast.LENGTH_LONG).show()
-    }
 
 }
