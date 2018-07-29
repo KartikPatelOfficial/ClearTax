@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="8dp"
+
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:paddingStart="6dp"
+        android:paddingEnd="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="8dp"
+        android:paddingLeft="6dp">
+
+        <ImageView
+            android:id="@+id/recyclerProfilePicture"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_person_black_24dp"
+            android:contentDescription="ProfilePicture"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/recyclerUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kartik Patel"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/recyclerTweets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="From a mentee in Cohort 4 to a second time Mentor in Cohort 6, like @RuteRadio and many others ✨
+
+@MozOpenLeaders has helped us learn a lot and gives y'all a platform to do more and work open. Bring your project for mentorship  training on open practices http://mzl.la/openleaders "
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="#AAA" />
+
+</LinearLayout>
