@@ -8,7 +8,7 @@ import android.net.ConnectivityManager
 
 class ConnectionChecker(val context:Context){
 
-    fun isConnectToInternet():Boolean{
+    fun conavailable():Boolean{
 
         val connectivity = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
         if (true) {
